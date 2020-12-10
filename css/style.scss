@@ -876,29 +876,16 @@ button {
     &.submit-btn {
         display: block;
         width: 100%;
+        color: $color-primary;
         font-weight: 700;
         
-        &.-active {
-            color: $color-primary;
-
-                &:active {
-                    box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
-                }
-            
-                &:hover {
-                    box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
-                }
+        &:hover {
+            box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
         }
-    }
-}
-
-.contact__message {
-    text-align: center;
-    margin-top: 60px;
-    display: none;
-
-    &.-error {
-        color: #f00;
+          
+        &:active {
+            box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+        }
     }
 }
 

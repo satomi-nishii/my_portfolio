@@ -1004,31 +1004,18 @@ button {
 button.submit-btn {
   display: block;
   width: 100%;
+  color: #006699;
   font-weight: 700;
 }
 
-button.submit-btn.-active {
-  color: #006699;
-}
-
-button.submit-btn.-active:active {
-  -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
-          box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
-}
-
-button.submit-btn.-active:hover {
+button.submit-btn:hover {
   -webkit-box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
           box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
 }
 
-.contact__message {
-  text-align: center;
-  margin-top: 60px;
-  display: none;
-}
-
-.contact__message.-error {
-  color: #f00;
+button.submit-btn:active {
+  -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+          box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
 }
 
 /* --------------------
