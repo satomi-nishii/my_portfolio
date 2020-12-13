@@ -381,10 +381,6 @@ drawer
   z-index: 1000;
 }
 
-#container {
-  z-index: 900;
-}
-
 #gloval-nav nav {
   z-index: 999;
 }
@@ -457,9 +453,11 @@ drawer
   transition: transform .3s ease, -webkit-transform .3s ease;
 }
 
-#gloval-nav a:hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+@media screen and (min-width: 768px) {
+  #gloval-nav a:hover::after {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
 }
 
 #gloval-nav ul {
@@ -551,6 +549,8 @@ about
   -webkit-box-flex: 0;
       -ms-flex: 0 0 55%;
           flex: 0 0 55%;
+  position: relative;
+  z-index: -1;
 }
 
 @media screen and (min-width: 768px) {
@@ -601,8 +601,10 @@ about
   transition: .3s;
 }
 
-.profile-link-item a:hover {
-  opacity: 0.7;
+@media screen and (min-width: 768px) {
+  .profile-link-item a:hover {
+    opacity: 0.7;
+  }
 }
 
 .profile-lead span {
@@ -615,8 +617,10 @@ about
   transition: .3s;
 }
 
-.profile-lead a:hover {
-  color: #e60115;
+@media screen and (min-width: 768px) {
+  .profile-lead a:hover {
+    color: #e60115;
+  }
 }
 
 .profile-link-list {
@@ -646,7 +650,6 @@ about
 .history-item {
   position: relative;
   padding-left: 16px;
-  z-index: -1;
 }
 
 .history-item:before {
@@ -831,13 +834,17 @@ work
   transition: .3s;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: -1;
 }
 
-.work__item:hover {
-  -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
-  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+@media screen and (min-width: 768px) {
+  .work__item:hover {
+    -webkit-transform: scale(1.05, 1.05);
+            transform: scale(1.05, 1.05);
+    -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -874,7 +881,6 @@ work
   width: 40%;
   position: relative;
   padding-left: 14px;
-  z-index: -1;
 }
 
 .work__item-body dl dt:before {
@@ -918,8 +924,10 @@ work
   transition: .3s;
 }
 
-.util-link:hover {
-  opacity: 0.7;
+@media screen and (min-width: 768px) {
+  .util-link:hover {
+    opacity: 0.7;
+  }
 }
 
 /* --------------------
@@ -927,6 +935,8 @@ contact
 -------------------- */
 .contact {
   background-color: #EBECF0;
+  position: relative;
+  z-index: -1;
 }
 
 .contact__text {
@@ -1008,9 +1018,11 @@ button.submit-btn {
   font-weight: 700;
 }
 
-button.submit-btn:hover {
-  -webkit-box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
-          box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+@media screen and (min-width: 768px) {
+  button.submit-btn:hover {
+    -webkit-box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+            box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+  }
 }
 
 button.submit-btn:active {

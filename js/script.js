@@ -23,7 +23,7 @@ $(function () {
     $('.nav-item-link').on('click', function() {
         $('body').removeClass('open');
     });  
-    
+
     // smoothscroll
     // #から始まるURLがクリックされた時
     $('a[href^="#"]').click(function() {

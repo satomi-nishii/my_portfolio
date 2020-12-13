@@ -367,17 +367,12 @@ drawer
     z-index: 1000;
 }
 
-#container {
-    z-index: 900;
-}
-
 #gloval-nav nav {
     z-index: 999;
 }
   
 #gloval-nav {
     background-color: rgba(0, 102, 153, .9);
-
     position: fixed;
     width: 100%;
     top: 0;
@@ -426,7 +421,9 @@ drawer
           }
 
         &:hover::after {
-            transform: scale(1, 1);
+            @include mq('pc') {
+                transform: scale(1, 1);
+            }
         }
     }
     
@@ -502,6 +499,8 @@ about
 
 .profile-text {
     flex: 0 0 55%;
+    position: relative;
+    z-index: -1;
 
     @include mq('pc') {
         padding-left: 30px;    
@@ -542,7 +541,9 @@ about
         transition: .3s;
 
         &:hover {
-            opacity: $hover-opacity;
+            @include mq('pc') {
+                opacity: $hover-opacity;
+            }
         }
     }
 }
@@ -557,7 +558,9 @@ about
         transition: .3s;
 
         &:hover {
-            color: #e60115; //秋吉レッド
+            @include mq('pc') {
+                color: #e60115; //秋吉レッド
+            }
         }
     }
 }
@@ -584,9 +587,8 @@ about
 }
 
 .history-item {
-        position: relative;
-        padding-left: 16px;
-        z-index: -1;
+    position: relative;
+    padding-left: 16px;
       
     &:before {
         font-family: "Font Awesome 5 Free";
@@ -701,7 +703,7 @@ skill
 /* --------------------
 work
 -------------------- */
-.work__item-list {    
+.work__item-list {     
     @include mq('pc') {
         display: flex;
         flex-wrap: wrap;
@@ -719,10 +721,14 @@ work
 .work__item {
     transition: .3s;
     box-shadow: 0 0 10px rgba(0,0,0,.3);
+    position: relative;
+    z-index: -1;
 
     &:hover {
-        transform: scale(1.05, 1.05);
-        box-shadow: 0 0 30px rgba(0,0,0,.3);
+        @include mq('pc') {
+            transform: scale(1.05, 1.05);
+            box-shadow: 0 0 30px rgba(0,0,0,.3);
+        }
     }
 
     @include mq('pc') {
@@ -754,7 +760,6 @@ work
             width: 40%;
             position: relative;
             padding-left: 14px;
-            z-index: -1;
     
             &:before {
                 font-family: "Font Awesome 5 Free";
@@ -799,7 +804,9 @@ work
     transition: .3s;
 
     &:hover {
-        opacity: $hover-opacity;
+        @include mq('pc') {
+            opacity: $hover-opacity;
+        }
     }
 }
 
@@ -811,6 +818,8 @@ $color-white: #FFF;
 
 .contact {
     background-color:$color-background-base;
+    position: relative;
+    z-index: -1;
 }
 
 .contact__text {
@@ -880,7 +889,9 @@ button {
         font-weight: 700;
         
         &:hover {
-            box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+            @include mq('pc') {
+                box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+            }
         }
           
         &:active {
