@@ -807,6 +807,16 @@ work
             opacity: $hover-opacity;
         }
     }
+
+    &.portfolio {
+        background-color: #B2B2B2;
+
+        &:hover {
+            @include mq('pc') {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 /* --------------------

@@ -929,6 +929,16 @@ work
   }
 }
 
+.util-link.portfolio {
+  background-color: #B2B2B2;
+}
+
+@media screen and (min-width: 768px) {
+  .util-link.portfolio:hover {
+    opacity: 1;
+  }
+}
+
 /* --------------------
 contact
 -------------------- */
