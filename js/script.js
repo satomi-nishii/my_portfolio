@@ -4,7 +4,7 @@ $(function () {
     new WOW().init();
 
     // loading
-    var loader = $('.loader-wrap');
+    var loader = $('.loading');
     // ページの読み込みが完了したらアニメーションを非表示
     $(window).on('load',function(){
         loader.fadeOut();
