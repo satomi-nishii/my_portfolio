@@ -451,6 +451,14 @@ drawer
     transform: translateX(0);
 }
 
+/* 背景固定 */
+.fixed {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+}
+
 /* --------------------
 about
 -------------------- */
@@ -475,7 +483,6 @@ about
 .profile-img-wrap {
     position: relative;
     max-width: 400px;
-    z-index: -1;
     margin: 0 auto;
 
     &:after {
@@ -499,8 +506,6 @@ about
 
 .profile-text {
     flex: 0 0 55%;
-    position: relative;
-    z-index: -1;
 
     @include mq('pc') {
         padding-left: 30px;    
@@ -721,8 +726,6 @@ work
 .work__item {
     transition: .3s;
     box-shadow: 0 0 10px rgba(0,0,0,.3);
-    position: relative;
-    z-index: -1;
 
     &:hover {
         @include mq('pc') {
@@ -754,7 +757,7 @@ work
     dl {
         display: flex;
         flex-wrap: wrap;        
-        font-size: 14px;
+        font-size: 16px;
 
         dt {
             width: 40%;
@@ -766,14 +769,14 @@ work
                 content: "\f0da";
                 font-weight: 900;
                 position: absolute;
-                font-size: 14px;
+                font-size: 16px;
                 left: 0;
                 top: 0;
             }
 
             &.basic:before {
                 content: "\f084";
-                left: -4px;
+                left: -6px;
             }
         }
 
@@ -782,10 +785,6 @@ work
 
             &.color-gray {
                 color: #a3aab9;
-            }
-
-            .fz-small {
-                font-size: 10px;
             }
         }
     }
@@ -818,8 +817,6 @@ $color-white: #FFF;
 
 .contact {
     background-color:$color-background-base;
-    position: relative;
-    z-index: -1;
 }
 
 .contact__text {

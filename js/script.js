@@ -15,14 +15,27 @@ $(function () {
     },3000);
 
     // ハンバーガーメニュー
-    $('#nav-toggle').on('click', function() {
+    var state = false;
+    var scrollpos;
+    $('#nav-toggle').on('click', function(){
         $('body').toggleClass('open');
+        if(state == false) {
+            scrollpos = $(window).scrollTop();
+            $('body').addClass('fixed').css({'top': -scrollpos});
+            state = true;
+        } else {
+            $('body').removeClass('fixed').css({'top': 0});
+            window.scrollTo( 0 , scrollpos );
+            state = false;
+        }
     });
 
     // リンクをクリックしたらメニューを閉じる
     $('.nav-item-link').on('click', function() {
-        $('body').removeClass('open');
-    });  
+        $('body').removeClass('open fixed').css({'top': 0});
+        window.scrollTo( 0 , scrollpos );
+        state = false;
+    });      
 
     // smoothscroll
     // #から始まるURLがクリックされた時
